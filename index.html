@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#107c72" />
+    <meta
+      name="description"
+      content="15問で副業や働き方のタイプを診断できるPWAツールです。"
+    />
+    <meta property="og:title" content="3分でわかる副業・働き方タイプ診断" />
+    <meta
+      property="og:description"
+      content="今の自分に合いやすい副業と最初の一歩をチェック。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/workstyle-map.png" />
+    <title>3分でわかる副業・働き方タイプ診断</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/icon-192.png" alt="" class="brand-icon" />
+        <div>
+          <p class="brand-kicker">3分でわかる</p>
+          <h1>副業・働き方タイプ診断</h1>
+        </div>
+      </div>
+      <button class="ghost-button install-button" type="button" hidden>
+        ホーム画面に追加
+      </button>
+    </header>
+
+    <main class="app-layout">
+      <aside class="side-panel" aria-label="診断の概要">
+        <img src="assets/workstyle-map.png" alt="" class="map-image" />
+        <div class="side-copy">
+          <p class="small-label">Workstyle Map</p>
+          <p>
+            副業、学び直し、働き方の方向性を、今の気分と行動パターンから整理します。
+          </p>
+        </div>
+      </aside>
+
+      <section class="tool-panel" aria-live="polite">
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-track">
+            <div class="progress-bar"></div>
+          </div>
+          <span class="progress-text"></span>
+        </div>
+
+        <div id="question-screen" class="question-screen"></div>
+        <div id="result-screen" class="result-screen" hidden></div>
+      </section>
+    </main>
+
+    <footer class="footer-note">
+      <span>PRリンクを掲載する場合があります。</span>
+      <span>診断結果は参考情報です。</span>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
